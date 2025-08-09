@@ -1,7 +1,7 @@
 body {
   background-color: #01133f;
   margin: 0;
-  font: italic small-caps bold 16px/2 cursive;
+  font-family: cursive;
   color: orange;
   overflow-x: hidden;
 }
@@ -17,10 +17,11 @@ body {
   flex-direction: column;
   gap: 10px;
 }
+
 .topbar {
   display: flex;
-  justify-content: space-between;
-  max-width: 40%;
+  justify-content: flex-start;
+  gap: 5%;
 }
 
 .topbar img {
@@ -31,11 +32,6 @@ body {
   margin-right: 25px;
   min-width: 300px;
   max-width: 50%;
-}
-
-.bandpic {
-  min-width: 98%;
-  max-width: 98%;
 }
 
 @media (max-width: 450px) {
@@ -51,24 +47,25 @@ body {
 }
 
 @media (orientation: landscape) {
-  iframe {
-    border: 1px solid black;
-    width: 90%; /* takes precedence over the width set with the HTML width attribute */
-  }
   .bandpic {
-    min-width: 85%;
-    max-width: 85%;
+    min-width: 60%;
+    max-width: 60%;
+  }
+  .embedtube {
+    min-width: 60%;
+    max-width: 60%;
+    height: 500px;
   }
 }
 
 @media (orientation: portrait) {
-  iframe {
-    border: 1px solid black;
-    width: 100%; /* takes precedence over the width set with the HTML width attribute */
-  }
-
   .bandpic {
     min-width: 98%;
     max-width: 98%;
+  }
+  .embedtube {
+    min-width: 98%;
+    max-width: 98%;
+    height: 300px;
   }
 }
