@@ -48,8 +48,8 @@ body {
   height: 300px;
 }
 
-.bandpic {
-  max-width: 100%;
+img {
+  max-width: 1000px;
 }
 /* Puhelimen näyttö esim n. 550px leveä */
 @media (max-width: 550px) {
