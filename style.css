@@ -1,7 +1,7 @@
 body {
   background-color: #002279;
   margin: 0;
-  font-family: cursive, "Trebuchet MS", Apple Chancery, sans-serif;
+  font-family: "PT Serif", serif, Georgia, serif;
   color: rgb(255, 196, 0);
   overflow-x: hidden;
   display: flex;
