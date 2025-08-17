@@ -1,71 +1,48 @@
 body {
-  background-color: #01133f;
+  background-color: #002279;
   margin: 0;
-  font-family: cursive;
-  color: orange;
+  font-family: cursive, "Trebuchet MS", Apple Chancery, sans-serif;
+  color: rgb(255, 196, 0);
   overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
+
 html,
 body {
   max-width: 100%;
   overflow-x: hidden;
 }
+
 .main {
-  width: 98%;
-  margin: 1%;
+  width: 96%;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  align-items: center;
+}
+
+.main > * {
+  max-width: 1000px;
+  width: 100%;
 }
 
 .topbar {
   display: flex;
+  flex-wrap: wrap;
+  column-gap: 14%;
   justify-content: flex-start;
-  gap: 5%;
 }
 
 .topbar img {
-  max-width: 50px;
+  max-width: 35px;
+  min-width: 10%;
 }
 
-.logo {
-  margin-right: 25px;
-  min-width: 300px;
-  max-width: 50%;
+.embedtube {
+  height: 300px;
 }
-
-@media (max-width: 450px) {
-  .main {
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 95%;
-    max-width: 95%;
-  }
-  .logo {
-    min-width: 100%;
-  }
-}
-
-@media (orientation: landscape) {
-  .bandpic {
-    min-width: 60%;
-    max-width: 60%;
-  }
-  .embedtube {
-    min-width: 60%;
-    max-width: 60%;
-    height: 500px;
-  }
-}
-
-@media (orientation: portrait) {
-  .bandpic {
-    min-width: 98%;
-    max-width: 98%;
-  }
-  .embedtube {
-    min-width: 98%;
-    max-width: 98%;
-    height: 300px;
-  }
+/* Puhelimen näyttö esim n. 550px leveä */
+@media (max-width: 550px) {
 }
