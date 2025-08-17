@@ -9,6 +9,10 @@ body {
   flex-direction: column;
 }
 
+a {
+  color: rgb(255, 196, 0);
+}
+
 html,
 body {
   max-width: 100%;
@@ -42,6 +46,10 @@ body {
 
 .embedtube {
   height: 300px;
+}
+
+.bandpic {
+  max-width: 100%;
 }
 /* Puhelimen näyttö esim n. 550px leveä */
 @media (max-width: 550px) {
