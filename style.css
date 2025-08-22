@@ -50,6 +50,7 @@ body {
 
 img {
   max-width: 1000px;
+  width: 100%;
 }
 /* Puhelimen näyttö esim n. 550px leveä */
 @media (max-width: 550px) {
