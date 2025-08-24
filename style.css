@@ -1,33 +1,31 @@
-body {
-  background-color: #002279;
-  margin: 0;
-  font-family: "PT Serif", serif, Georgia, serif;
-  color: rgb(255, 196, 0);
-  overflow-x: hidden;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-a {
-  color: rgb(255, 196, 0);
-}
-
 html,
 body {
   max-width: 100%;
   overflow-x: hidden;
 }
 
+body {
+  background-color: #002279;
+  font-family:
+    Georgia, "PT Serif", serif;
+  color: rgb(255, 196, 0);
+  overflow-x: hidden;
+}
+
+a {
+  color: rgb(255, 196, 0);
+}
+
 .main {
-  width: 96%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: center;
 }
 
-.main > * {
+.mainblock,
+img {
   max-width: 1000px;
   width: 100%;
 }
@@ -46,12 +44,10 @@ body {
 
 .embedtube {
   height: 300px;
-}
-
-img {
-  max-width: 1000px;
   width: 100%;
 }
+
+
+
 /* Puhelimen näyttö esim n. 550px leveä */
-@media (max-width: 550px) {
-}
+@media (max-width: 550px) {}
