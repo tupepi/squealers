@@ -56,7 +56,7 @@ img {
 }
 
 .logo {
-  border-bottom: solid;
+  border-bottom: 2px solid;
 }
 
 /* Footer --------------------*/
@@ -65,8 +65,9 @@ footer {
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+  padding-top: 5px;
   justify-content: space-between;
-  border-top: solid;
+  border-top: 2px solid;
   min-height: 50px;
   gap: 7px;
 }
