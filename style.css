@@ -5,11 +5,15 @@ body {
 }
 
 body {
-  background-color: #002279;
   font-family:
     Georgia, "PT Serif", serif;
   color: rgb(255, 196, 0);
   overflow-x: hidden;
+
+  background: #00247e;
+  background-image: radial-gradient(#001c64 1px, transparent 0);
+  background-size: 5px 5px;
+  background-position: -19px -19px;
 }
 
 a {
@@ -30,6 +34,7 @@ img {
   width: 100%;
 }
 
+/* topbar ------------------------------ */
 .topbar {
   display: flex;
   flex-wrap: wrap;
@@ -42,12 +47,57 @@ img {
   min-width: 10%;
 }
 
+/* ........................................ */
+
+
 .embedtube {
   height: 300px;
   width: 100%;
 }
 
+.logo {
+  border-bottom: solid;
+}
 
+/* Footer --------------------*/
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-top: solid;
+  min-height: 50px;
+  gap: 7px;
+}
+
+.bottombar {
+  width: 40%;
+  min-width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottombar img {
+  max-width: 25px;
+  min-width: 10%;
+}
+
+.footerlogo {
+  max-width: 40%;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 40%;
+  min-width: 250px;
+  max-width: 300px;
+}
+
+/* ---------------------------------- */
 
 /* Puhelimen näyttö esim n. 550px leveä */
 @media (max-width: 550px) {}
