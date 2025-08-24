@@ -9,17 +9,19 @@ body {
     Tahoma;
   font-style: italic;
   font-weight: bolder;
-  color: rgb(255, 196, 0);
+  color: rgb(255, 166, 0);
   overflow-x: hidden;
 
   background: #00247e;
-  background-image: radial-gradient(#001c64 1px, transparent 0);
+  background-image: radial-gradient(#002d9e 1px, transparent 0);
   background-size: 5px 5px;
   background-position: -19px -19px;
+
+  hyphens: auto;
 }
 
 a {
-  color: rgb(255, 196, 0);
+  color: rgb(255, 166, 0);
 }
 
 .main {
@@ -28,6 +30,12 @@ a {
   flex-direction: column;
   gap: 10px;
   align-items: center;
+}
+
+.mainblock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .mainblock,
@@ -39,9 +47,12 @@ img {
 /* topbar ------------------------------ */
 .topbar {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  column-gap: 14%;
+
+  column-gap: 10%;
   justify-content: flex-start;
+  min-width: 100%;
 }
 
 .topbar img {
@@ -53,8 +64,9 @@ img {
 
 
 .embedtube {
-  height: 300px;
-  width: 100%;
+  margin: auto;
+  width: 90%;
+  aspect-ratio: 16 / 9;
 }
 
 .logo {
