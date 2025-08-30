@@ -10,23 +10,23 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   font-weight: 900;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.2rem;
   line-height: 1.5em;
   font-size: 100%;
 
   --font-color: rgb(255, 166, 0);
   color: var(--font-color);
 
-  --shadow-color: rgb(26, 26, 26);
+  --shadow-color: rgb(44, 29, 0);
   /* -webkit-text-stroke: 0.5px var(--shadow-color);
    */
   text-shadow: 3px 3px 0 var(--shadow-color), -1px -1px 0 var(--shadow-color),
     1px -1px 0 var(--shadow-color), -1px 1px 0 var(--shadow-color),
     1px 1px 0 var(--shadow-color);
 
-  background: #002991;
-  background-image: radial-gradient(#002d9d 5px, transparent 0);
-  background-size: 10px 10px;
+  background: #293550;
+  background-image: radial-gradient(#2c4378 1px, transparent 0);
+  background-size: 5px 5px;
   background-position: -19px -19px;
 
   hyphens: auto;
@@ -138,7 +138,9 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 25px;
+  flex-wrap: wrap;
+  column-gap: 15px;
+  max-width: 100%;
 }
 
 /* ---------------------------------- */
