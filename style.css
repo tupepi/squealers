@@ -5,13 +5,24 @@ body {
 }
 
 body {
-  font-family:
-    Tahoma;
+  overflow-x: hidden;
+
+  font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
-  font-weight: bolder;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+  line-height: 1.5em;
+  font-size: 100%;
+
   --font-color: rgb(255, 166, 0);
   color: var(--font-color);
-  overflow-x: hidden;
+
+  --shadow-color: rgb(26, 26, 26);
+  /* -webkit-text-stroke: 0.5px var(--shadow-color);
+   */
+  text-shadow: 3px 3px 0 var(--shadow-color), -1px -1px 0 var(--shadow-color),
+    1px -1px 0 var(--shadow-color), -1px 1px 0 var(--shadow-color),
+    1px 1px 0 var(--shadow-color);
 
   background: #002991;
   background-image: radial-gradient(#002d9d 5px, transparent 0);
@@ -35,6 +46,7 @@ a {
 
 .mainblock {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
@@ -63,7 +75,6 @@ img {
 
 /* ........................................ */
 
-
 .embedtube {
   margin: auto;
   width: 90%;
@@ -86,7 +97,7 @@ summary {
   /* Standard */
 }
 
-details>p {
+details > p {
   border-top: solid;
   border-bottom: solid;
   padding: 5px 0;
@@ -103,6 +114,7 @@ footer {
   border-top: 1px solid;
   min-height: 50px;
   gap: 7px;
+  min-width: 90%;
 }
 
 .bottombar {
@@ -125,13 +137,12 @@ footer {
 .copyright {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 40%;
-  min-width: 250px;
-  max-width: 300px;
+  justify-content: center;
+  gap: 25px;
 }
 
 /* ---------------------------------- */
 
 /* Puhelimen näyttö esim n. 550px leveä */
-@media (max-width: 550px) {}
+@media (max-width: 550px) {
+}
