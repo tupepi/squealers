@@ -10,7 +10,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   font-weight: 900;
-  letter-spacing: 0.2rem;
+  word-spacing: 0.5em;
+  letter-spacing: 0.2em;
   line-height: 1.5em;
   font-size: 100%;
 
@@ -20,12 +21,12 @@ body {
   --shadow-color: rgb(44, 29, 0);
   /* -webkit-text-stroke: 0.5px var(--shadow-color);
    */
-  text-shadow: 3px 3px 0 var(--shadow-color), -1px -1px 0 var(--shadow-color),
+  text-shadow: 2px 2px 0 var(--shadow-color), -1px -1px 0 var(--shadow-color),
     1px -1px 0 var(--shadow-color), -1px 1px 0 var(--shadow-color),
     1px 1px 0 var(--shadow-color);
 
-  background: #293550;
-  background-image: radial-gradient(#2c4378 1px, transparent 0);
+  background: #2a3c64;
+  background-image: radial-gradient(#2a4990 1px, transparent 0);
   background-size: 5px 5px;
   background-position: -19px -19px;
 
