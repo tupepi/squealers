@@ -70,8 +70,8 @@ img {
 }
 
 .topbar img {
-  max-width: 35px;
-  min-width: 10%;
+  max-width: 50px;
+  min-width: 15%;
 }
 
 /* ........................................ */
@@ -83,6 +83,9 @@ img {
 }
 
 .logo {
+}
+
+.line {
   border-bottom: 1px solid;
   padding-bottom: 5px;
 }
