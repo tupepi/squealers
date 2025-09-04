@@ -61,7 +61,7 @@ img {
 /* topbar ------------------------------ */
 .topbar {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
 
   column-gap: 10%;
@@ -70,8 +70,9 @@ img {
 }
 
 .topbar img {
-  max-width: 35px;
-  min-width: 10%;
+  max-width: 50px;
+  max-height: 50px;
+  width: 15%;
 }
 
 /* ........................................ */
@@ -80,9 +81,13 @@ img {
   margin: auto;
   width: 90%;
   aspect-ratio: 16 / 9;
+  max-height: 90vh;
 }
 
 .logo {
+}
+
+.line {
   border-bottom: 1px solid;
   padding-bottom: 5px;
 }
