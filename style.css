@@ -59,20 +59,51 @@ img {
 }
 
 /* topbar ------------------------------ */
-.topbar {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
 
-  column-gap: 10%;
-  justify-content: flex-start;
-  min-width: 100%;
+.calltogroups {
+  width: 100%;
 }
 
-.topbar img {
-  max-width: 50px;
-  max-height: 50px;
-  width: 15%;
+.calltogroups > h2 {
+  text-align: center;
+}
+
+.calltogroups > div {
+  margin: 0 auto 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 175px);
+  grid-gap: 1em 0.5em;
+  justify-content: center;
+}
+
+.callbutton {
+  text-decoration: none;
+
+  box-shadow: 2px 2px 2px gray;
+
+  background-color: rgb(255, 103, 47);
+  color: #362fb8;
+  border-radius: 2%;
+  --shadow-color: rgb(179, 250, 255);
+  /* -webkit-text-stroke: 0.5px var(--shadow-color);
+   */
+  text-shadow: 2px 2px 0 var(--shadow-color), -1px -1px 0 var(--shadow-color),
+    1px -1px 0 var(--shadow-color), -1px 1px 0 var(--shadow-color),
+    1px 1px 0 var(--shadow-color);
+
+  display: flex;
+  align-items: center;
+  gap: 5%;
+
+  width: 100%;
+  min-height: 50px;
+}
+
+.callbutton img {
+  margin-left: 5px;
+  max-width: 100%;
+  max-height: 100%;
+  width: 20%;
 }
 
 /* ........................................ */
@@ -123,7 +154,7 @@ footer {
   min-width: 90%;
 }
 
-.bottombar {
+.bottomicons {
   width: 40%;
   min-width: 200px;
   display: flex;
@@ -131,7 +162,7 @@ footer {
   align-items: center;
 }
 
-.bottombar img {
+.bottomicons img {
   max-width: 25px;
   min-width: 10%;
 }
