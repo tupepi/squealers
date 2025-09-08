@@ -1,187 +1,188 @@
+:root {
+  --font-color: rgb(255, 166, 0);
+  --body-shadow: rgb(44, 29, 0);
+  --cta-shadow: rgb(179, 250, 255);
+  --cta-bg: rgb(255, 103, 47);
+  --cta-color: #362fb8;
+}
+
+/* Reset */
 html,
 body {
+  margin: 0;
+  padding: 0;
   max-width: 100%;
   overflow-x: hidden;
 }
-
 body {
-  overflow-x: hidden;
-
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   font-weight: 900;
+  font-size: 100%;
+  line-height: 1.5em;
   word-spacing: 0.5em;
   letter-spacing: 0.2em;
-  line-height: 1.5em;
-  font-size: 100%;
-
-  --font-color: rgb(255, 166, 0);
   color: var(--font-color);
-
-  --shadow-color: rgb(44, 29, 0);
-  /* -webkit-text-stroke: 0.5px var(--shadow-color);
-   */
-  text-shadow: 2px 2px 0 var(--shadow-color), -1px -1px 0 var(--shadow-color),
-    1px -1px 0 var(--shadow-color), -1px 1px 0 var(--shadow-color),
-    1px 1px 0 var(--shadow-color);
-
-  background: #2a3c64;
-  background-image: radial-gradient(#2a4990 1px, transparent 0);
+  text-shadow: 2px 2px 0 var(--body-shadow), -1px -1px 0 var(--body-shadow),
+    1px -1px 0 var(--body-shadow), -1px 1px 0 var(--body-shadow),
+    1px 1px 0 var(--body-shadow);
+  background: #2a3c64 radial-gradient(#2a4990 1px, transparent 0);
   background-size: 5px 5px;
   background-position: -19px -19px;
-
   hyphens: auto;
 }
-
 a {
   color: var(--font-color);
-}
-
-.main {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-}
-
-.mainblock {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.mainblock,
-img {
-  max-width: 1000px;
-  width: 100%;
-}
-
-/* topbar ------------------------------ */
-
-.calltogroups {
-  width: 100%;
-}
-
-.calltogroups > h2 {
-  text-align: center;
-}
-
-.calltogroups > div {
-  margin: 0 auto 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 175px);
-  grid-gap: 1em 0.5em;
-  justify-content: center;
-}
-
-.callbutton {
   text-decoration: none;
+}
 
-  box-shadow: 2px 2px 2px gray;
-
-  background-color: rgb(255, 103, 47);
-  color: #362fb8;
-  border-radius: 2%;
-  --shadow-color: rgb(179, 250, 255);
-  /* -webkit-text-stroke: 0.5px var(--shadow-color);
-   */
-  text-shadow: 2px 2px 0 var(--shadow-color), -1px -1px 0 var(--shadow-color),
-    1px -1px 0 var(--shadow-color), -1px 1px 0 var(--shadow-color),
-    1px 1px 0 var(--shadow-color);
-
+/* Utils */
+.flex {
   display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-center {
+  justify-content: center;
   align-items: center;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.gap-5 {
   gap: 5%;
-
-  width: 100%;
-  min-height: 50px;
 }
-
-.callbutton img {
-  margin-left: 5px;
-  max-width: 100%;
-  max-height: 100%;
-  width: 20%;
+.gap-10px {
+  gap: 10px;
 }
-
-/* ........................................ */
-
-.embedtube {
-  margin: auto;
-  width: 90%;
-  aspect-ratio: 16 / 9;
-  max-height: 90vh;
-}
-
-.logo {
-}
-
 .line {
   border-bottom: 1px solid;
   padding-bottom: 5px;
 }
 
-summary {
-  -webkit-user-select: none;
-  /* Safari */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* IE10+/Edge */
-  user-select: none;
-  /* Standard */
+/* Main layout */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.mainblock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  width: 100%;
 }
 
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.footerlogo {
+  max-width: 500px;
+  width: 85%;
+  height: auto;
+}
+
+/* CTA buttons */
+.calltogroups {
+  width: 100%;
+}
+
+.calltogroups h2 {
+  text-align: center;
+  width: auto;
+}
+
+.calltogroups-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 175px);
+  gap: 1em 0.5em;
+  justify-content: center;
+}
+.callbutton {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  width: 100%;
+  min-height: 50px;
+  background-color: var(--cta-bg);
+  color: var(--cta-color);
+  border-radius: 2%;
+  box-shadow: 2px 2px 2px gray;
+  --shadow-color: var(--cta-shadow);
+  text-shadow: 2px 2px 0 var(--shadow-color), -1px -1px 0 var(--shadow-color),
+    1px -1px 0 var(--shadow-color), -1px 1px 0 var(--shadow-color),
+    1px 1px 0 var(--shadow-color);
+}
+.callbutton img {
+  width: auto;
+  height: 100%;
+  max-width: 35px;
+  margin-left: 5px;
+}
+
+/* Media embed */
+.embedtube {
+  margin: auto;
+  width: 90%;
+  aspect-ratio: 16/9;
+  max-height: 90vh;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 5px;
+  border-top: 1px solid;
+  min-height: 50px;
+  min-width: 90%;
+  gap: 7px;
+}
+footer .bottomicons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  min-width: 200px;
+}
+footer .bottomicons li img {
+  max-width: 25px;
+  min-width: 10%;
+}
+footer .copyright {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 15px;
+  max-width: 100%;
+}
+
+/* Details/Summary */
+summary {
+  user-select: none;
+}
 details > p {
   border-top: solid;
   border-bottom: solid;
   padding: 5px 0;
 }
 
-/* Footer --------------------*/
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  padding-top: 5px;
-  justify-content: space-between;
-  border-top: 1px solid;
-  min-height: 50px;
-  gap: 7px;
-  min-width: 90%;
-}
-
-.bottomicons {
-  width: 40%;
-  min-width: 200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.bottomicons img {
-  max-width: 25px;
-  min-width: 10%;
-}
-
-.footerlogo {
-  max-width: 40%;
-}
-
-.copyright {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  column-gap: 15px;
-  max-width: 100%;
-}
-
-/* ---------------------------------- */
-
-/* Puhelimen näyttö esim n. 550px leveä */
+/* Responsiivisuus */
 @media (max-width: 550px) {
+  /* Responsiivisuus */
 }
