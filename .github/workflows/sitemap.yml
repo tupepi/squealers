@@ -1,21 +1,36 @@
 name: Generate sitemap
+
 on:
   push:
     branches:
       - main
+
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Generate sitemap.xml
         uses: cicirello/generate-sitemap@v1
         with:
           base-url-path: "https://squealersband.com"
-      - name: Commit sitemap
+          include-pdf: false
+          changefreq: weekly
+          priority: 0.8
+
+      - name: Commit and push sitemap.xml
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add sitemap.xml
-          git commit -m "update sitemap" || echo "No changes"
-          git push
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add sitemap.xml || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update sitemap"
+            git push
+          fi
