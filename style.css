@@ -85,9 +85,12 @@ small {
   margin-bottom: 0;
 }
 
-h1 {
+h1,
+h3,
+h4,
+h5,
+h6 {
   font-family: Arial, sans-serif;
-  margin-bottom: 0;
   font-style: italic;
   font-weight: 1000;
   color: rgb(255, 106, 0);
