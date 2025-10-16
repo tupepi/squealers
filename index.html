@@ -66,6 +66,7 @@
         ]
       }
     </script>
+    <script src="reset_animation.js"></script>
   </head>
   <body>
     <main class="main flex-col flex-center gap-10px">
@@ -78,8 +79,8 @@
       <!-- Listen & Follow CTAs -->
       <section class="mainblock flex-col flex-center gap-10px">
         <nav class="calltogroups flex-center">
-          <h2>Listen now!</h2>
-          <ul class="calltogroups-list">
+          <h2 id="streaming-links">Listen now!</h2>
+          <ul class="calltogroups-list animate-on-click">
             <li>
               <a
                 href="https://open.spotify.com/artist/20bTE7abvp3MvSm3nf7lsR"
@@ -123,8 +124,8 @@
             </li>
           </ul>
 
-          <h2>Follow us!</h2>
-          <ul class="calltogroups-list">
+          <h2 id="social-links">Follow us!</h2>
+          <ul class="calltogroups-list animate-on-click">
             <li>
               <a
                 href="https://www.instagram.com/squealers_band/"
@@ -151,8 +152,13 @@
           Finland. Our focus is on writing tight, riff-driven rock music.
         </p>
         <p>
-          Heavily influenced by AC/DC, we mix in covers with original
-          compositions in our live show.
+          Heavily influenced by <a href="https://www.acdc.com/home/">AC/DC</a>,
+          we mix in covers with original compositions in our live show.
+        </p>
+        <p>
+          <a href="#streaming-links">Stream</a> our original music and
+          <a href="#social-links">follow us</a> for the latest shows and
+          updates.
         </p>
       </section>
 
@@ -172,11 +178,12 @@
 
       <!-- Footer -->
       <footer class="mainblock flex-col flex-center gap-10px">
-        <img
-          class="footerlogo"
-          src="./src/squealers_logo.svg"
-          alt="Squealers band logo"
-        />
+        <a href="#top"
+          ><img
+            class="footerlogo"
+            src="./src/squealers_logo.svg"
+            alt="Squealers band logo"
+        /></a>
         <div class="copyright flex-center gap-5">
           <div>©2025</div>
           <a href="mailto:squealersbandi@gmail.com" class="email"

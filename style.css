@@ -13,6 +13,7 @@ body {
   padding: 0;
   max-width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -32,7 +33,7 @@ body {
   hyphens: auto;
 }
 a {
-  color: var(--font-color);
+  color: var(--cta-bg);
   text-decoration: none;
 }
 
@@ -138,6 +139,25 @@ img {
     1px -1px 0 var(--shadow-color), -1px 1px 0 var(--shadow-color),
     1px 1px 0 var(--shadow-color);
 }
+
+/* callbutton animaatio --------------*/
+/* Esimerkki: elementti liukuu sivulle */
+@keyframes slideIn {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-on-click {
+  animation: slideIn 1s ease forwards;
+}
+
+/* -------------------------- */
 .callbutton img {
   width: auto;
   height: 100%;
