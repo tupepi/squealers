@@ -5,12 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Squeal­ers is a rock ’n’ roll band from Jy­väs­ky­­lä, Finland. Our focus is on writing tight, riff-driven rock music. Heavily influenced by AC/DC."
+      content="Squeal­ers is a rock ’n’ roll band from Jy­väs­ky­­lä, Finland. Heavily influenced by AC/DC, our focus is on writing tight, riff-driven rock music. Solid rock 'n' roll, played right and loud."
     />
     <title>Rock 'n' Roll band from Jyväskylä | SquealersBand.com</title>
     <link rel="icon" href="/src/favicon.ico" />
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="preload"
+      href="style.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="style.css" /></noscript>
     <link rel="canonical" href="https://squealersband.com" />
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta
+      property="og:title"
+      content="Squealers – Rock 'n' Roll Band Jyväskylästä"
+    />
+    <meta
+      property="og:description"
+      content="Squealers on jyväskyläläinen rock 'n' roll -yhtye, joka soittaa tiukkaa riffivetoista musiikkia AC/DC-hengessä."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://squealersband.com/" />
+    <meta
+      property="og:image"
+      content="https://squealersband.com/images/squealers-logo.png"
+    />
+    <meta property="og:site_name" content="Squealers" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Squealers – Rock 'n' Roll Band Jyväskylästä"
+    />
+    <meta
+      name="twitter:description"
+      content="Squealers on jyväskyläläinen rock 'n' roll -yhtye, joka soittaa tiukkaa riffivetoista musiikkia AC/DC-hengessä."
+    />
+    <meta
+      name="twitter:image"
+      content="https://squealersband.com/images/squealers-logo.png"
+    />
+
+    <!-- Structured Data (JSON-LD, Organization) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MusicGroup",
+        "name": "Squealers",
+        "url": "https://squealersband.com/",
+        "logo": "https://squealersband.com/images/squealers-logo.png",
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=100087154827305",
+          "https://www.instagram.com/squealers_band/",
+          "https://open.spotify.com/artist/20bTE7abvp3MvSm3nf7lsR",
+          "https://music.apple.com/us/artist/squealers/1652739782"
+        ]
+      }
+    </script>
   </head>
   <body>
     <main class="main flex-col flex-center gap-10px">
