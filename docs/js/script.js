@@ -20,8 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
         // Lasketaan scroll-sijainti siten, että elementti on keskellä
         const elementTop =
           targetEl.getBoundingClientRect().top + window.scrollY;
-        const scrollTo =
-          elementTop - window.innerHeight / 2 + targetEl.offsetHeight / 2;
+
+        let scrollTo = elementTop;
+        if (targetEl.offsetHeight < window.innerHeight) {
+          scrollTo =
+            elementTop - window.innerHeight / 2 + targetEl.offsetHeight / 2;
+        }
 
         window.scrollTo({
           top: scrollTo,
