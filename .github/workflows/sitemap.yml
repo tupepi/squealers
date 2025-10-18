@@ -36,7 +36,7 @@ jobs:
 
       # 4️⃣ Deploy minifioitu build 'build'-branchiin
       - name: Deploy to 'build' branch
-        uses: peaceiris/actions-gh-pages@v6
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs # minifioidut tiedostot
