@@ -36,12 +36,18 @@ jobs:
 
       # 4️⃣ Commit & push muutokset
       - name: Commit and push changes
+        shell: bash
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add *.html docs/css/*.css docs/js/*.js sitemap.xml || true
+
+          # Lisää kaikki muutokset
+          git add .
+
+          # Tarkista onko mitään muutettavaa
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
             git commit -m "Minify HTML/CSS/JS and update sitemap"
             git push
+          fi
