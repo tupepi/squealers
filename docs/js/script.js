@@ -1,1 +1,42 @@
-document.addEventListener("DOMContentLoaded",()=>{let e=document.querySelector(".image-wrapper .full"),t=e.querySelector("img");t.complete?e.classList.add("loaded"):t.onload=()=>e.classList.add("loaded"),document.querySelectorAll("a.internal-link").forEach(t=>{t.addEventListener("click",e=>{e.preventDefault();e=t.getAttribute("href").substring(1);(e=document.getElementById(e))&&(e=e.getBoundingClientRect().top+window.scrollY-window.innerHeight/2+e.offsetHeight/2,window.scrollTo({top:e,behavior:"smooth"}),document.querySelectorAll(".animate-on-click").forEach(e=>{e.classList.remove("animate-on-click"),e.offsetWidth,e.classList.add("animate-on-click")}))})})});
+document.addEventListener("DOMContentLoaded", () => {
+  const fullPicture = document.querySelector(".image-wrapper .full");
+  const fullImg = fullPicture.querySelector("img");
+
+  if (!fullImg.complete) {
+    fullImg.onload = () => fullPicture.classList.add("loaded");
+  } else {
+    // Jos kuva on jo cachetettu
+    fullPicture.classList.add("loaded");
+  }
+
+  document.querySelectorAll("a.internal-link").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault(); // estetään normaali anchor-scroll
+
+      const targetId = link.getAttribute("href").substring(1);
+      const targetEl = document.getElementById(targetId);
+
+      if (targetEl) {
+        // Lasketaan scroll-sijainti siten, että elementti on keskellä
+        const elementTop =
+          targetEl.getBoundingClientRect().top + window.scrollY;
+        const scrollTo =
+          elementTop - window.innerHeight / 2 + targetEl.offsetHeight / 2;
+
+        window.scrollTo({
+          top: scrollTo,
+          behavior: "smooth", // pehmeä liike
+        });
+
+        // Halutessasi voit myös triggeröidä animaation samalla
+        const animatedElements = document.querySelectorAll(".animate-on-click");
+        animatedElements.forEach((el) => {
+          // Poistetaan luokka hetkeksi, jotta animaatio voidaan käynnistää uudelleen
+          el.classList.remove("animate-on-click");
+          void el.offsetWidth; // Trigger reflow
+          el.classList.add("animate-on-click");
+        });
+      }
+    });
+  });
+});

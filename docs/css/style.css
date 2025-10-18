@@ -67,7 +67,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 35px;
+  gap: 50px;
 }
 .mainblock {
   display: flex;
