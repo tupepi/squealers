@@ -31,8 +31,8 @@ jobs:
         with:
           base-url-path: "https://squealersband.com"
           include-pdf: false
-          changefreq: weekly
-          priority: 0.8
+          include-html: true
+          sitemap-format: xml
 
       # 4️⃣ Commit & push muutokset
       - name: Commit and push changes
