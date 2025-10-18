@@ -16,31 +16,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ Minify HTML
-      - name: Minify HTML
-        uses: supercharge/html-minifier-action@v1
+      # 2️⃣ Minify HTML, CSS, JS
+      - name: Auto minify files
+        uses: nizarmah/auto-minify@v3
         with:
-          source: "./docs" # polku HTML-tiedostoihin
-          destination: "./docs"
-          options: "--collapse-whitespace --remove-comments --remove-optional-tags"
+          directory: "./docs" # polku HTML-tiedostoihin
+          overwrite: true # ylikirjoittaa alkuperäiset tiedostot
+          js_engine: "uglify-js" # JS-minifiointimoottori
+          css_engine: "clean-css" # CSS-minifiointimoottori
 
-      # 3️⃣ Minify CSS
-      - name: Minify CSS
-        uses: samuelmeuli/action-minify@v1
-        with:
-          type: "css"
-          source: "./docs/css" # polku CSS-tiedostoihin
-          destination: "./docs/css"
-
-      # 4️⃣ Minify JS
-      - name: Minify JS
-        uses: samuelmeuli/action-minify@v1
-        with:
-          type: "js"
-          source: "./docs/js" # polku JS-tiedostoihin
-          destination: "./docs/js"
-
-      # 5️⃣ Generate sitemap.xml
+      # 3️⃣ Generate sitemap.xml
       - name: Generate sitemap.xml
         uses: cicirello/generate-sitemap@v1
         with:
@@ -49,8 +34,8 @@ jobs:
           changefreq: weekly
           priority: 0.8
 
-      # 6️⃣ Commit & push changes
-      - name: Commit and push all changes
+      # 4️⃣ Commit & push muutokset
+      - name: Commit and push changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
