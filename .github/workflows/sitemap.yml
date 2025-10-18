@@ -39,7 +39,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs # minifioidut tiedostot
+          publish_dir: ./ # minifioidut tiedostot
           publish_branch: build # uusi build-branch
           user_name: github-actions
           user_email: github-actions@github.com
