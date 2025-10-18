@@ -1,17 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  /*   document.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      const animatedElements = document.querySelectorAll(".animate-on-click");
-      animatedElements.forEach((el) => {
-        // Poistetaan luokka hetkeksi, jotta animaatio voidaan käynnistää uudelleen
-        el.classList.remove("animate-on-click");
-        void el.offsetWidth; // Trigger reflow
-        el.classList.add("animate-on-click");
-      });
-    });
-  }); */
-
-  document.querySelectorAll("a").forEach((link) => {
+  document.querySelectorAll("a.internal-link").forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault(); // estetään normaali anchor-scroll
 
