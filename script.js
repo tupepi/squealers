@@ -1,4 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const fullPicture = document.querySelector(".image-wrapper .full");
+  const fullImg = fullPicture.querySelector("img");
+
+  if (!fullImg.complete) {
+    fullImg.onload = () => fullPicture.classList.add("loaded");
+  } else {
+    // Jos kuva on jo cachetettu
+    fullPicture.classList.add("loaded");
+  }
+
   document.querySelectorAll("a.internal-link").forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault(); // estetään normaali anchor-scroll

@@ -97,6 +97,10 @@ h6 {
 }
 
 /* Images */
+#banner {
+  aspect-ratio: 5103 / 2824;
+}
+
 img {
   max-width: 100%;
   height: auto;
