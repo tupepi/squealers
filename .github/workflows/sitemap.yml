@@ -39,7 +39,7 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add docs/**/*.html docs/css/*.css docs/js/*.js sitemap.xml || true
+          git add *.html docs/css/*.css docs/js/*.js sitemap.xml || true
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
