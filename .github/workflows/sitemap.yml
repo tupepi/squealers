@@ -1,4 +1,4 @@
-name: Generate sitemap
+name: Build, Minify & Generate Sitemap
 
 on:
   push:
@@ -12,9 +12,35 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # 1️⃣ Checkout repo
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 2️⃣ Minify HTML
+      - name: Minify HTML
+        uses: supercharge/html-minifier-action@v1
+        with:
+          source: "./docs" # polku HTML-tiedostoihin
+          destination: "./docs"
+          options: "--collapse-whitespace --remove-comments --remove-optional-tags"
+
+      # 3️⃣ Minify CSS
+      - name: Minify CSS
+        uses: samuelmeuli/action-minify@v1
+        with:
+          type: "css"
+          source: "./docs/css" # polku CSS-tiedostoihin
+          destination: "./docs/css"
+
+      # 4️⃣ Minify JS
+      - name: Minify JS
+        uses: samuelmeuli/action-minify@v1
+        with:
+          type: "js"
+          source: "./docs/js" # polku JS-tiedostoihin
+          destination: "./docs/js"
+
+      # 5️⃣ Generate sitemap.xml
       - name: Generate sitemap.xml
         uses: cicirello/generate-sitemap@v1
         with:
@@ -23,14 +49,14 @@ jobs:
           changefreq: weekly
           priority: 0.8
 
-      - name: Commit and push sitemap.xml
+      # 6️⃣ Commit & push changes
+      - name: Commit and push all changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add sitemap.xml || true
+          git add docs/**/*.html docs/css/*.css docs/js/*.js sitemap.xml || true
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update sitemap"
+            git commit -m "Minify HTML/CSS/JS and update sitemap"
             git push
-          fi
