@@ -34,7 +34,7 @@ body {
 }
 a {
   color: var(--cta-bg);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 /* Utils */
@@ -120,7 +120,7 @@ img {
   width: 100%;
 }
 
-.calltogroups > h2 {
+.calltogroups > h2:first-of-type {
   margin-top: 0;
 }
 
