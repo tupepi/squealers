@@ -3,7 +3,7 @@ name: Build, Minify & Generate Sitemap
 on:
   push:
     branches:
-      - main
+      - main # tai dev, missä kehität
 
 permissions:
   contents: write
@@ -12,7 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # 1️⃣ Checkout repo
+      # 1️⃣ Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -30,24 +30,16 @@ jobs:
         uses: cicirello/generate-sitemap@v1
         with:
           base-url-path: "https://squealersband.com"
-          include-pdf: false
           include-html: true
+          include-pdf: false
           sitemap-format: xml
 
-      # 4️⃣ Commit & push muutokset
-      - name: Commit and push changes
-        shell: bash
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-
-          # Lisää kaikki muutokset
-          git add .
-
-          # Tarkista onko mitään muutettavaa
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "Minify HTML/CSS/JS and update sitemap"
-            git push
-          fi
+      # 4️⃣ Deploy minifioitu build 'build'-branchiin
+      - name: Deploy to 'build' branch
+        uses: peaceiris/actions-gh-pages@v6
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs # minifioidut tiedostot
+          publish_branch: build # uusi build-branch
+          user_name: github-actions
+          user_email: github-actions@github.com
