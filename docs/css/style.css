@@ -92,6 +92,7 @@ h5,
 h6 {
   margin-top: 0;
   margin-bottom: 0;
+  max-width: 98%;
   font-family: Arial, sans-serif;
   font-style: italic;
   font-weight: 1000;
@@ -109,8 +110,7 @@ img {
 }
 
 .footerlogo {
-  max-width: 500px;
-  width: 85%;
+  width: 100%;
   height: auto;
 }
 
