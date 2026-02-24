@@ -1,8 +1,8 @@
 :root {
-  --font-color: rgb(255, 166, 0);
+  --font-color: rgb(255, 155, 0);
   --body-shadow: rgb(44, 29, 0);
   --cta-shadow: rgb(179, 250, 255);
-  --cta-bg: rgb(255, 103, 47);
+  --cta-bg: rgb(255, 113, 25);
   --cta-color: #362fb8;
 }
 
@@ -24,10 +24,13 @@ body {
   word-spacing: 0.5em;
   letter-spacing: 0.2em;
   color: var(--font-color);
-  text-shadow: 2px 2px 0 var(--body-shadow), -1px -1px 0 var(--body-shadow),
-    1px -1px 0 var(--body-shadow), -1px 1px 0 var(--body-shadow),
+  text-shadow:
+    2px 2px 0 var(--body-shadow),
+    -1px -1px 0 var(--body-shadow),
+    1px -1px 0 var(--body-shadow),
+    -1px 1px 0 var(--body-shadow),
     1px 1px 0 var(--body-shadow);
-  background: #2a3c64 radial-gradient(#2a4990 1px, transparent 0);
+  background: #2a3c64 radial-gradient(#3154a7 1px, transparent 0);
   background-size: 5px 5px;
   background-position: -19px -19px;
   hyphens: auto;
@@ -149,8 +152,11 @@ img {
   border-radius: 2%;
   box-shadow: 2px 2px 2px gray;
   --shadow-color: var(--cta-shadow);
-  text-shadow: 2px 2px 0 var(--shadow-color), -1px -1px 0 var(--shadow-color),
-    1px -1px 0 var(--shadow-color), -1px 1px 0 var(--shadow-color),
+  text-shadow:
+    2px 2px 0 var(--shadow-color),
+    -1px -1px 0 var(--shadow-color),
+    1px -1px 0 var(--shadow-color),
+    -1px 1px 0 var(--shadow-color),
     1px 1px 0 var(--shadow-color);
 }
 
