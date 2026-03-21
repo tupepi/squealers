@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,7 +13,7 @@
       rel="preload"
       href="docs/css/style.css"
       as="style"
-      onload="this.rel='stylesheet'"
+      onload="this.rel = 'stylesheet'"
     />
 
     <link rel="canonical" href="https://squealersband.com" />
@@ -232,8 +232,20 @@
 
       <!-- YouTube embed -->
       <section class="mainblock flex-col flex-center gap-10px" id="live-show">
-        <h3>Squealers - Big Dog @ Live at Kramsu</h3>
-        <iframe
+        <h3>Squealers - Showreel</h3>
+        <video
+          class="showreel"
+          controls
+          width="100%"
+          preload="metadata"
+          poster="/thumb.jpg"
+        >
+          <source
+            src="https://pub-5169427f27f5405fa2f9d4a557f393a5.r2.dev/showreel.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <!-- <iframe
           loading="lazy"
           class="embedtube"
           src="https://www.youtube.com/embed/Q9aPLqheBC8?si=1_wrtBaKK0HkxwuZ&amp;start=101"
@@ -243,7 +255,7 @@
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
         >
-        </iframe>
+        </iframe> -->
       </section>
 
       <!-- Background -->
