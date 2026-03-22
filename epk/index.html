@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Squeal­ers is a rock ’n’ roll band from Jy­väs­ky­­lä, Finland. Heavily influenced by AC/DC, we focus on writing tight, riff-driven rock music."
+    />
+    <title>Rock 'n' Roll band from Jyväskylä | SquealersBand.com</title>
+    <link rel="icon" href="/src/favicon.ico" />
+    <link
+      rel="preload"
+      href="../docs/css/style.css"
+      as="style"
+      onload="this.rel = 'stylesheet'"
+    />
+
+    <link rel="canonical" href="https://squealersband.com" />
+    <link rel="preload" href="src/kollaasi.webp" as="image" />
+    <link rel="preload" href="src/kollaasi.png" as="image" />
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta
+      property="og:title"
+      content="Squealers – Rock 'n' Roll Band Jyväskylästä"
+    />
+    <meta
+      property="og:description"
+      content="Squealers on jyväskyläläinen rock 'n' roll -yhtye, joka soittaa tiukkaa riffivetoista musiikkia AC/DC-hengessä."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://squealersband.com/" />
+    <meta
+      property="og:image"
+      content="https://squealersband.com/images/squealers-logo.png"
+    />
+    <meta property="og:site_name" content="Squealers" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Squealers – Rock 'n' Roll Band Jyväskylästä"
+    />
+    <meta
+      name="twitter:description"
+      content="Squealers on jyväskyläläinen rock 'n' roll -yhtye, joka soittaa tiukkaa riffivetoista musiikkia AC/DC-hengessä."
+    />
+    <meta
+      name="twitter:image"
+      content="https://squealersband.com/images/squealers-logo.png"
+    />
+
+    <!-- Structured Data (JSON-LD, Organization) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MusicGroup",
+        "name": "Squealers",
+        "url": "https://squealersband.com/",
+        "logo": "https://squealersband.com/images/squealers-logo.png",
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=100087154827305",
+          "https://www.instagram.com/squealers_band/",
+          "https://open.spotify.com/artist/20bTE7abvp3MvSm3nf7lsR",
+          "https://music.apple.com/us/artist/squealers/1652739782"
+        ]
+      }
+    </script>
+    <script src="/docs/js/script.js"></script>
+  </head>
+  <body>
+    <main class="main flex-col flex-center">
+      <!-- Logo & slogan -->
+      <style>
+        .image-wrapper {
+          position: relative;
+          width: 100%;
+        }
+
+        .image-wrapper picture {
+          display: block;
+          width: 100%;
+        }
+
+        .image-wrapper img {
+          width: 100%;
+          height: auto;
+          display: block;
+          transition: opacity 0.6s ease;
+        }
+
+        .full {
+          position: absolute;
+          inset: 0;
+          opacity: 0;
+        }
+
+        .full.loaded {
+          opacity: 1;
+        }
+      </style>
+      <section class="mainblock line flex-col flex-center">
+        <div class="image-wrapper">
+          <!-- Pieni placeholder näkyy ensin -->
+          <picture class="placeholder">
+            <source
+              srcset="../src/kollaasi_placeholder.webp"
+              type="image/webp"
+            />
+            <img
+              src="../src/kollaasi_placeholder.png"
+              alt="Squealers band logo placeholder"
+              width="5103"
+              height="2824"
+              loading="lazy"
+            />
+          </picture>
+
+          <!-- Täysikokoinen kuva ladattuna taustalla -->
+          <picture class="full">
+            <source srcset="../src/kollaasi.webp" type="image/webp" />
+            <img
+              src="../src/kollaasi.png"
+              alt="Squealers band logo full"
+              width="5103"
+              height="2824"
+            />
+          </picture>
+        </div>
+        <small>Solid rock 'n' roll, played right and loud</small>
+      </section>
+
+      <!-- Listen & Follow CTAs -->
+      <section class="mainblock flex-col flex-center gap-10px">
+        <nav class="calltogroups flex-center">
+          <h2 id="streaming-links">Musiikki!</h2>
+          <ul class="calltogroups-list animate-on-click">
+            <li>
+              <a
+                href="https://open.spotify.com/artist/20bTE7abvp3MvSm3nf7lsR"
+                class="callbutton"
+                ><img
+                  src="../src/ikonit/spotify-min.png"
+                  alt="Spotify"
+                />Spotify</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://music.apple.com/us/artist/squealers/1652739782"
+                class="callbutton"
+                ><img
+                  src="../src/ikonit/itunes-min.png"
+                  alt="Apple Music"
+                />Apple Music</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="https://music.amazon.com/artists/B0BLB4RZ4M/squealers"
+                class="callbutton"
+                ><img src="../src/ikonit/amazon-min.png" alt="Amazon" />Amazon
+                Music</a
+              >
+            </li>
+          </ul>
+
+          <h2 id="social-links">Videot ja some!</h2>
+
+          <ul class="calltogroups-list animate-on-click">
+            <li>
+              <a href="#live-show" class="callbutton"
+                ><img src="../src/ikonit/horns.png" alt="SHOWREEL" />SHOWREEL</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/@Squealers_band"
+                class="callbutton"
+                ><img
+                  src="../src/ikonit/tube-min.png"
+                  alt="YouTube"
+                />YouTube</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/squealers_band/"
+                class="callbutton"
+                ><img
+                  src="../src/ikonit/ig-min.png"
+                  alt="Instagram"
+                />Instagram</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/profile.php?id=100087154827305"
+                class="callbutton"
+                ><img
+                  src="../src/ikonit/fb-min.png"
+                  alt="Facebook"
+                />Facebook</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- About band -->
+      <section class="mainblock flex-col gap-10px">
+        <h1>Squealers plays (mostly!) AC/DC</h1>
+        <p>
+          Kak&shy;si set&shy;tiä tiu&shy;kas&shy;ti groovaavia
+          klas&shy;si&shy;koi&shy;ta ja hel&shy;miä AC/DC:n
+          tuo&shy;tan&shy;nosta. Höys&shy;tee&shy;nä hyv&shy;äl&shy;lä
+          maul&shy;la Squealers-&shy;o&shy;ri&shy;gi&shy;naa&shy;le&shy;ja,
+          jot&shy;ka voi bon&shy;ga&shy;ta vai&shy;n ko&shy;vin
+          AC/DC-&shy;tun&shy;ti&shy;ja.
+        </p>
+        <p>
+          Tar&shy;joam&shy;me tar&shy;vit&shy;taes&shy;sa täy&shy;sin
+          AC/DC-&shy;tuo&shy;tan&shy;nos&shy;ta koos&shy;tu&shy;vaa
+          pa&shy;ket&shy;tia, jo&shy;ka so&shy;pii
+          e&shy;si&shy;mer&shy;kik&shy;si hy&shy;vin juh&shy;liin ja
+          yk&shy;si&shy;tyis&shy;ti&shy;lai&shy;suuk&shy;siin. Li&shy;säk&shy;si
+          vaih&shy;to&shy;eh&shy;to&shy;na on
+          Squealers-&shy;o&shy;ri&shy;gi&shy;naa&shy;leis&shy;ta
+          koos&shy;tu&shy;va set&shy;ti, jo&shy;ka so&shy;pii hy&shy;vin
+          e&shy;si&shy;mer&shy;kik&shy;si u&shy;se&shy;an
+          ork&shy;kis-&shy;bän&shy;din il&shy;toi&shy;hin.
+        </p>
+        <p>
+          Ota yhteyttä!
+          <a href="mailto:keikat@squealersband.com" class="email"
+            >keikat@squealersband.com</a
+          >
+        </p>
+      </section>
+
+      <!-- YouTube embed -->
+      <section class="mainblock flex-col flex-center gap-10px" id="live-show">
+        <h3>Squealers - Showreel</h3>
+        <video
+          class="showreel"
+          controls
+          width="100%"
+          preload="metadata"
+          poster="https://pub-5169427f27f5405fa2f9d4a557f393a5.r2.dev/thumb.png"
+        >
+          <source
+            src="https://pub-5169427f27f5405fa2f9d4a557f393a5.r2.dev/showreel.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <!-- <iframe
+          loading="lazy"
+          class="embedtube"
+          src="https://www.youtube.com/embed/Q9aPLqheBC8?si=1_wrtBaKK0HkxwuZ&amp;start=101"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        >
+        </iframe> -->
+      </section>
+
+      <!-- Footer -->
+      <footer class="mainblock flex-col flex-center gap-10px">
+        <a href="#top"
+          ><img
+            class="footerlogo"
+            src="../src/squealers_logo.svg"
+            alt="Squealers band logo"
+        /></a>
+        <div class="copyright flex-center gap-5">
+          <div>©2025</div>
+          <a href="mailto:keikat@squealersband.com" class="email"
+            >keikat@squealersband.com</a
+          >
+        </div>
+        <ul class="bottomicons flex gap-5">
+          <li>
+            <a href="https://open.spotify.com/artist/20bTE7abvp3MvSm3nf7lsR"
+              ><img src="../src/ikonit/spotify-min.png" alt="Spotify"
+            /></a>
+          </li>
+          <li>
+            <a href="https://music.apple.com/us/artist/squealers/1652739782"
+              ><img src="../src/ikonit/itunes-min.png" alt="Apple Music"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@Squealers_band"
+              ><img src="../src/ikonit/tube-min.png" alt="YouTube"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/squealers_band/"
+              ><img src="../src/ikonit/ig-min.png" alt="Instagram"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=100087154827305"
+              ><img src="../src/ikonit/fb-min.png" alt="Facebook"
+            /></a>
+          </li>
+        </ul>
+      </footer>
+    </main>
+  </body>
+</html>
